@@ -60,9 +60,9 @@ function writeClass(name, vars) {
             if ($.isNumeric(key)) {
                 classComp += '\tvar _' + key + ': ' + capitalizeFirstLetter(camelize(element)) + '? \n';
             } else if (element.indexOf("[") != -1) {
-                classComp += '\tvar ' + camelize(key) + ': [' + capitalizeFirstLetter(camelize(element)) + ']? \n';
+                classComp += '\tvar @objc dynamic ' + camelize(key) + ': [' + capitalizeFirstLetter(camelize(element)) + ']? \n';
             } else {
-                classComp += '\tvar ' + camelize(key) + ': ' + capitalizeFirstLetter(camelize(element)) + '? \n';
+                classComp += '\tvar @objc dynamic ' + camelize(key) + ': ' + capitalizeFirstLetter(camelize(element)) + '? \n';
             }
 
         }
